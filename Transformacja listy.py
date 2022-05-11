@@ -1,6 +1,6 @@
 liczby = [1,2,3,4,5,6]
 '''
-Sposób Pierwszy
+Sposób Pierwszy.
 '''
 potegiDwojki = []
 for element in liczby:
