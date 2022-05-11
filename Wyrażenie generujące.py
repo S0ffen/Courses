@@ -19,7 +19,7 @@ Przy pomocy import sys możemy sprawdzić jakiej wielkości jest nasz generator
 print(sys.getsizeof(evenNumbersGenerator))
 
 
-Wyrażenie generujące tworzymy za pomocą nawiasów okrągłych ( ) używamy go kiedy dane z których pobieramy wartości są ogromne. Jest ich bardzo dużo i nie potrzebujemy przechowywać danych w pamięci komputera, a także gdy potrzebujemy skorzystać z funkcji list czyli np. dodawanie (sum), sortowanie.
+Wyrażenie generujące tworzymy za pomocą nawiasów okrągłych ( ) używamy go kiedy dane z których pobieramy wartości są ogromne. Jest ich bardzo dużo i nie potrzebujemy przechowywać danych w pamięci komputera, a także gdy potrzebujemy skorzystać z funkcji list czyli np. dodawanie (sum), sortowanie..
 
 
 """
