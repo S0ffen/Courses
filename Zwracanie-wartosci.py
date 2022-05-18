@@ -1,4 +1,4 @@
-""" return - zwrócić, pozwala na modyfikacje zwróconej wartości,  None - nic - false, return kończy funkcje tak samo jak break
+""" return - zwrócić, pozwala na modyfikacje zwróconej wartości,  None - nic - false, return kończy funkcje tak samo jak break.
 """
 
 def pole_prostokata(a, b):
