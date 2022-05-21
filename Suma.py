@@ -51,30 +51,23 @@ def finish_timer(start):
     end = time.perf_counter()
     return(end-start)
 
+"""Lekcja 52"""
 
-start = time.perf_counter()
-print(sumuj_do(2355555))
-end = time.perf_counter()
-print(finish_timer(start))
 
-start = time.perf_counter()
-print(sumuj_do2(2355555))
-end = time.perf_counter()
-print(finish_timer(start))
+def function_performance(func,arg):
+    start = time.perf_counter()
+    func(arg)
+    end = time.perf_counter()
+    return end - start
 
-start = time.perf_counter()
-print(sumuj_do3(2355555))
-end = time.perf_counter()
-print(finish_timer(start))
 
-start = time.perf_counter()
-print(sumuj_do4(2355555))
-end = time.perf_counter()
-print(finish_timer(start))
+def show_messange(message):
+    print(message)
 
-start = time.perf_counter()
-print(sumuj_do5(23555))
-end = time.perf_counter()
-print(finish_timer(start))
+print(function_performance(sumuj_do,50000))
+print(function_performance(sumuj_do2,50000))
+print(function_performance(sumuj_do3,50000))
+print(function_performance(sumuj_do4,50000))
+print(function_performance(sumuj_do5,50000))
 
 
