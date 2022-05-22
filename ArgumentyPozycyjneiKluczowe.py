@@ -5,7 +5,7 @@
 """
 
 """
-Arguemnty pozycyjne to takie które nie mają przypisanej wartości
+Arguemnty pozycyjne to takie które nie mają przypisanej wartości.
 """
 def greet(name, message, separator = " "):
     print(message,name, sep=separator) # sep oznacza separation czyli co ma być pomiedzy tekstami (\n oznacza enter)
