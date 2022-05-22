@@ -1,7 +1,7 @@
 """
     Argumenty kluczowe i pozycyjne 
     kluczowy - w postaci: klucz - wartość (domyślny)
-    pozycyjne - takich, których liczy się kolejność przy wywołaniu
+    pozycyjne - takich, których liczy się kolejność przy wywołaniu.
 """
 
 """
