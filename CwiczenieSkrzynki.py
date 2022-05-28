@@ -30,10 +30,14 @@ Pamiętaj o:
 
 
 
+from gettext import find
 import random
 from enum import Enum
 
-
+def findApproximateValue(value, percentRange):
+    lowestValue = value - (percentRange/100) * value
+    highestValue = value + (percentRange/100) * value
+    return random.randint(lowestValue,highestValue)
 
 
 Event = Enum('Event', ['Chest', 'Empty'])
@@ -74,6 +78,7 @@ rewardsForChests = {
 GameLength = 5
 GoldAcquired = 0
 
+
 print("Welcome to my game KOMNATA")
 print("""You have only 5 steps to make, 
 see yourself how much gold you gonna acquire till the end!""")
@@ -87,7 +92,7 @@ while GameLength > 0:
             print("You've drawn a chest")
             DrawnChest = random.choices(chestColorList,ChestColourProbability)[0]
             print("The chest color is", DrawnChest.value)
-            GamerReward = rewardsForChests[DrawnChest]
+            GamerReward = findApproximateValue(rewardsForChests[DrawnChest],10)
             GoldAcquired = GoldAcquired + GamerReward
             
 
