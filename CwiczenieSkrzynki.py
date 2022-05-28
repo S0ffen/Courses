@@ -30,7 +30,6 @@ Pamiętaj o:
 
 
 
-from gettext import find
 import random
 from enum import Enum
 
