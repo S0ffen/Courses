@@ -2,6 +2,11 @@
 
 Jsonplaceholder - miejsce zastępcze na twój przyszły json
 
+Można załadować ten plik na dwa sposoby
+Sposób 1
+tasks = json.loads(r.text)
+Sposob 2
+taska r.json()
 """
 
 import requests
