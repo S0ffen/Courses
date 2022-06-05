@@ -6,7 +6,7 @@ Można załadować ten plik na dwa sposoby
 Sposób 1
 tasks = json.loads(r.text)
 Sposob 2
-taska r.json()
+tasks = r.json()
 """
 
 import requests
