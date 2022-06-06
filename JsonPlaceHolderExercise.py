@@ -105,9 +105,39 @@ Lekcja 86
 
 Sposob 2
 
-"""
+
 
 for userId in userWithTopCompletedTasks:
     r = requests.get('https://jsonplaceholder.typicode.com/users/'+str(userId))
     user2 = r.json()
     print("Wręczamy ciasteczko mistrzunia dyscypliny o imieniu: ", user2['name'])
+
+"""
+"""
+Lekcja 87
+
+Sposob 3
+Najlepszy sposob bo teraz ten program jest uniwersalny
+"""
+
+def change_list_into_conj_of_param(my_list, key = "id"):
+    conj_param = key + "="
+
+    conj_param = "id="
+    lastIteraion = len(my_list)
+    i = 0
+    for item in my_list:
+        i += 1
+        if i == lastIteraion:
+            conj_param += str(item)
+        else:
+            conj_param +=str(item) + "&" + key + "="
+    print(conj_param)
+    return conj_param
+
+conj_param = change_list_into_conj_of_param(userWithTopCompletedTasks, "id")
+
+r = requests.get('https://jsonplaceholder.typicode.com/users/',params=conj_param)
+user3 = r.json()
+for user in user3:
+    print("Wręczamy ciasteczko mistrzunia dyscypliny o imieniu: ", user['name'])
