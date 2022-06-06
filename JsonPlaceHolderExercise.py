@@ -38,7 +38,7 @@ else:
 #print(userIdWithMaxCompletedTasks)
 
 """
-
+Sposob 2 bardziej czytelniejszy z użyciem funkcji (w taki sposób powinien wyglądać kod)
 """
 
 
