@@ -81,3 +81,18 @@ else:
     #print("Wręczamy ciasteczko mistrzunia dyscypliny o id: ",userWithTopCompletedTasks)
 
 print(get_keys_with_top_values(completedtasksFrequencyByUser))
+"""
+
+Lekcja 85 mamy już kto ma najlepszy wynik i teraz chcemy mu wysłać to ciasteczko
+ale żeby tego dokonać musimy znać jego imie itp
+
+Sposob 1 jest dobry dla małej ilości danych jakby było w milionach to by było wolniejsze
+"""
+
+
+r = requests.get('https://jsonplaceholder.typicode.com/users')
+
+users = r.json()
+for user in users:
+    if user["id"] in userWithTopCompletedTasks:
+        print("Wręczamy ciasteczko mistrzunia dyscypliny o imieniu: ",user['name'])
