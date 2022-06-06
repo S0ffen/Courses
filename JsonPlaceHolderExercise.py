@@ -87,7 +87,7 @@ Lekcja 85 mamy już kto ma najlepszy wynik i teraz chcemy mu wysłać to ciastec
 ale żeby tego dokonać musimy znać jego imie itp
 
 Sposob 1 jest dobry dla małej ilości danych jakby było w milionach to by było wolniejsze
-"""
+
 
 
 r = requests.get('https://jsonplaceholder.typicode.com/users')
@@ -95,4 +95,19 @@ r = requests.get('https://jsonplaceholder.typicode.com/users')
 users = r.json()
 for user in users:
     if user["id"] in userWithTopCompletedTasks:
-        print("Wręczamy ciasteczko mistrzunia dyscypliny o imieniu: ",user['name'])
+        print("Wręczamy ciasteczko mistrzunia dyscypliny o imieniu: ", user['name'])
+
+"""
+
+
+"""
+Lekcja 86
+
+Sposob 2
+
+"""
+
+for userId in userWithTopCompletedTasks:
+    r = requests.get('https://jsonplaceholder.typicode.com/users/'+str(userId))
+    user2 = r.json()
+    print("Wręczamy ciasteczko mistrzunia dyscypliny o imieniu: ", user2['name'])
