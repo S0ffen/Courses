@@ -1,5 +1,6 @@
 import requests
 import json
+from collections import defaultdict
 
 """
 chcemy mieć user id i ilość ukończonych tasków i wybrać tego co ma najwięcej np:
@@ -23,13 +24,11 @@ try:
 except json.decoder.JSONDecodeError:
     print("Nie poprawny format")
 else:
-    completedtasksFrequencyByUser = dict()
+    completedtasksFrequencyByUser = defaultdict(int)
     for entry in tasks:
         if (entry["completed"] == True):
-            try:
-                completedtasksFrequencyByUser[entry["userId"]] += 1
-            except KeyError:
-                completedtasksFrequencyByUser[entry["userId"]] = 1
+            completedtasksFrequencyByUser[entry["userId"]] += 1
+
     userIdWithMaxCompletedTasks = []
     maxAmountOfCompletedTasks = max(completedtasksFrequencyByUser.values())
     for userId, NumberOfCompletedTasks in completedtasksFrequencyByUser.items():
